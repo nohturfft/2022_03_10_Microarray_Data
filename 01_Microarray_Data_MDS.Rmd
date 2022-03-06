@@ -149,7 +149,7 @@ In addition, close inspection tells us that the authors used **two replicates fo
 
 
 ### Probe IDs  
-Because microarray chips often have many probes for a given gene, each probe has its own ID. These can look a bit strange. Each row in the dataset represents one probe, and each probe has a unique ID. The `Biobase::featureNames()` function extracts the probe IDs. Let's look at just the first 6 IDs by piping the IDs to the `head()` function:
+Each microarray probe has its own ID. These IDs can look a bit strange. Each row in the dataset represents one probe, and each probe has a unique ID. The `Biobase::featureNames()` function extracts the probe IDs. Let's look at just the first 6 IDs by piping the IDs to the `head()` function:
 
 ```{r Probe-IDs}
 Biobase::featureNames(gse) %>% head
@@ -200,7 +200,7 @@ mx <- Biobase::exprs(gse)
 ```
 
 
-Let's print a a few rows and columns of the mx data matrix:  
+Let's print a few rows and columns of the mx data matrix:  
 ```{r Matrix-excerpt}
 mx[1:4, 1:4]
 ```
